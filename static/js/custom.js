@@ -19,7 +19,7 @@
 // });
 
 //Bootstrap4 .active class on clicked links
-$("[class$=nav]").on("click", ".nav-link", { x: 99 }, e => {
+$("[class$=nav]").on("click", ".nav-link", {}, e => {
   $(e.target)
     .parent(".nav-item")
     .addClass("active")

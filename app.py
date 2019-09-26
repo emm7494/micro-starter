@@ -10,6 +10,11 @@ def make_shell_context():
 
 
 @app.route("/")
+@app.route("/index")
 def index():
     return render_template("index.html")
 
+
+@app.route("/home")
+def about():
+    render_template("about.html")

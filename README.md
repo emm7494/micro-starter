@@ -1,1 +1,1 @@
-# mini-starter
+# micro-starter
