@@ -1,1 +1,1 @@
-# mini_starter
+# mini-starter
