@@ -1,0 +1,39 @@
+{% macro set_title(title, fallback) %}
+{% if title %}
+{{ title }}
+{% else %}
+{{ fallback }}
+{% endif %}
+{% endmacro %}
+
+{% macro render_field(field) %}
+<dt>{{ field.label }}</dt>
+<dd>
+    {{ field(**kwargs)|safe }}
+    {% if field.erros %}
+    <ul>
+        {% for error in field.erros %}
+        <li class="error">[{{ error }}]</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</dd>
+{% endmacro %}
+
+{% macro set_navlink(name, endpoint) %}
+{% if request.endpoint != None %}
+{% if request.endpoint.endswith(endpoint) %}
+<li class="active">
+    <a href="{{ url_for(endpoint, **kwargs) }}">
+        {{ name }}
+    </a>
+</li>
+{% else %}
+<li>
+    <a href="{{ url_for(endpoint, **kwargs) }}">
+        {{ name }}
+    </a>
+</li>
+{% endif %}
+{% endif %}
+{% endmacro %}

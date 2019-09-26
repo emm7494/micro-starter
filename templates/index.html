@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a href="{{ url_for('index') }}" class="navbar-brand">Mini Starter</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-site-nav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse show navbar-collapse" id="main-site-nav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+{% endblock %}
