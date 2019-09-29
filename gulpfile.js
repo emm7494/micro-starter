@@ -59,7 +59,7 @@ function runBSync(done) {
     //reloadOnRestart: false,
     //watch: true,
     //	files: [ 'static/**/*.css', 'static/**/*.js' ],
-    proxy: "http://0.0.0.0:5000"
+    proxy: "http://0.0.0.0:9090"
   });
   done();
 }

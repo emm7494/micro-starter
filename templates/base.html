@@ -2,12 +2,37 @@
 <html lang="en">
 
 <head>
-    {% include '_head.html' %}
+  {% include '_head.html' %}
 </head>
 
 <body>
-    {% block main %}{% endblock %}
-    {% include '_scripts.html'%}
+  <div class="site-wrapper">
+    <header class="site-navbar navbar navbar-expand-lg fixed-top navbar-light bg-light px-8">
+      <a href="{{ url_for('index') }}" class="navbar-brand">Micro Starter</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-site-nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse show navbar-collapse justify-content-end" id="main-site-nav">
+        <ul class="navbar-nav">
+          {% from '_macros.html' import set_active_page %}
+          {{
+              set_active_page("Home", "index")
+            }}
+          {{
+              set_active_page("About", "about")
+            }}
+          {{
+              set_active_page("Contact", "contact")
+            }}
+        </ul>
+      </div>
+    </header>
+
+    <main class="page-main">
+      {% block page_main %}{% endblock %}
+    </main>
+  </div>
+  {% include '_scripts.html'%}
 </body>
 
 </html>

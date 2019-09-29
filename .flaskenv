@@ -1,7 +1,7 @@
 FLASK_ENV=development
-FLASK_APP='app.py'
-FLASK_HOST='0.0.0.0'
-FLASK_PORT=9090
+FLASK_APP='wsgi.py'
+FLASK_RUN_HOST='0.0.0.0'
+FLASK_RUN_PORT=9090
 FLASK_DEBUG=1
 
 #load these manually inside your config.py file

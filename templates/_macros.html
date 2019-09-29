@@ -20,17 +20,17 @@
 </dd>
 {% endmacro %}
 
-{% macro set_navlink(name, endpoint) %}
+{% macro set_active_page(name, endpoint) %}
 {% if request.endpoint != None %}
 {% if request.endpoint.endswith(endpoint) %}
-<li class="active">
-    <a href="{{ url_for(endpoint, **kwargs) }}">
+<li class="nav-item active">
+    <a class="nav-link" href="{{ url_for(endpoint, **kwargs) }}">
         {{ name }}
     </a>
 </li>
 {% else %}
-<li>
-    <a href="{{ url_for(endpoint, **kwargs) }}">
+<li class="nav-item">
+    <a class="nav-link" href="{{ url_for(endpoint, **kwargs) }}">
         {{ name }}
     </a>
 </li>
