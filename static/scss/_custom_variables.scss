@@ -1,5 +1,3 @@
-@import "../vendor/bootstrap/scss/functions";
-
 // Variables
 //
 // Variables should follow the `$component-state-property-size` formula for
@@ -98,15 +96,15 @@ $yiq-text-light: $white !default;
 
 $enable-caret: true !default;
 $enable-rounded: true !default;
-$enable-shadows: false !default;
-$enable-gradients: false !default;
+$enable-shadows: true !default;
+$enable-gradients: true !default;
 $enable-transitions: true !default;
 $enable-prefers-reduced-motion-media-query: true !default;
 $enable-hover-media-query: false !default; // Deprecated, no longer affects any compiled CSS
 $enable-grid-classes: true !default;
 $enable-pointer-cursor-for-buttons: true !default;
 $enable-print-styles: true !default;
-$enable-responsive-font-sizes: false !default;
+$enable-responsive-font-sizes: true !default;
 $enable-validation-icons: true !default;
 $enable-deprecation-messages: true !default;
 
@@ -126,9 +124,7 @@ $spacers: map-merge((0: 0,
         3: $spacer,
         4: ($spacer * 1.5),
         5: ($spacer * 3),
-        6: ($spacer * 6),
-        7: ($spacer * 12),
-        8: ($spacer * 24)),
+        6: ($spacer * 6)),
     $spacers);
 
 // This variable affects the `.h-*` and `.w-*` classes.
@@ -213,8 +209,8 @@ $line-height-sm: 1.5 !default;
 $border-width: 1px !default;
 $border-color: $gray-300 !default;
 
-$border-radius: 0.25rem !default;
-$border-radius-lg: .25rem !default;
+$border-radius: .25rem !default;
+$border-radius-lg: .3rem !default;
 $border-radius-sm: .2rem !default;
 
 $rounded-pill: 50rem !default;
@@ -248,7 +244,10 @@ $embed-responsive-aspect-ratios: join(((21 9),
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif: -apple-system,
+@import url('../font/Comfortaa/Comfortaa-VariableFont:wght.ttf');
+$font-family-sans-serif:"Comfortaa",
+"cursive",
+-apple-system,
 BlinkMacSystemFont,
 "Segoe UI",
 Roboto,
@@ -267,11 +266,30 @@ Consolas,
 "Liberation Mono",
 "Courier New",
 monospace !default;
+// $font-family-sans-serif: -apple-system,
+// BlinkMacSystemFont,
+// "Segoe UI",
+// Roboto,
+// "Helvetica Neue",
+// Arial,
+// "Noto Sans",
+// sans-serif,
+// "Apple Color Emoji",
+// "Segoe UI Emoji",
+// "Segoe UI Symbol",
+// "Noto Color Emoji" !default;
+// $font-family-monospace: SFMono-Regular,
+// Menlo,
+// Monaco,
+// Consolas,
+// "Liberation Mono",
+// "Courier New",
+// monospace !default;
 $font-family-base: $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
 $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
-$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-lg: $font-size-base * 1.50 !default;
 $font-size-sm: $font-size-base * .875 !default;
 
 $font-weight-lighter: lighter !default;
@@ -282,6 +300,7 @@ $font-weight-bolder: bolder !default;
 
 $font-weight-base: $font-weight-normal !default;
 $line-height-base: 1.5 !default;
+
 
 $h1-font-size: $font-size-base * 2.5 !default;
 $h2-font-size: $font-size-base * 2 !default;
@@ -296,10 +315,21 @@ $headings-font-weight: 500 !default;
 $headings-line-height: 1.2 !default;
 $headings-color: null !default;
 
-$display1-size: 6rem !default;
-$display2-size: 5.5rem !default;
-$display3-size: 4.5rem !default;
-$display4-size: 3.5rem !default;
+// Implementing modular scale: golden ratio
+$font-scale: 1.618 !default;
+
+$display6-size: $font-size-base !default;
+$display5-size: $display6-size * $font-scale !default;
+$display4-size: $display5-size * $font-scale !default;
+$display3-size: $display4-size * $font-scale !default;
+$display2-size: $display3-size * $font-scale !default;
+$display1-size: $display2-size * $font-scale !default;
+
+
+// $display1-size: 6rem !default;
+// $display2-size: 5.5rem !default;
+// $display3-size: 4.5rem !default;
+// $display4-size: 3.5rem !default;
 
 $display1-weight: 300 !default;
 $display2-weight: 300 !default;
@@ -703,12 +733,12 @@ $nav-divider-margin-y: $spacer / 2 !default;
 
 // Navbar
 
-$navbar-padding-y: $spacer / 1 !default;
-$navbar-padding-x: $spacer * 2 !default;
+$navbar-padding-y: $spacer / 2 !default;
+$navbar-padding-x: $spacer !default;
 
-$navbar-nav-link-padding-x: 1.2rem !default;
+$navbar-nav-link-padding-x: .5rem !default;
 
-$navbar-brand-font-size: $font-size-lg * 1.4 !default;
+$navbar-brand-font-size: $font-size-lg !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
 $nav-link-height: $font-size-base * $line-height-base+$nav-link-padding-y * 2 !default;
 $navbar-brand-height: $navbar-brand-font-size * $line-height-base !default;
@@ -804,10 +834,10 @@ $pagination-disabled-border-color: $gray-300 !default;
 
 
 // Jumbotron
-
 $jumbotron-padding: 4rem !default;
+$jumbotron-bg: transparent;
 $jumbotron-color: null !default;
-$jumbotron-bg: $gray-200 !default;
+// $jumbotron-bg: $gray-200 !default;
 
 
 // Cards

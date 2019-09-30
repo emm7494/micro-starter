@@ -1,16 +1,14 @@
-// // Import bootstrap4 source functions
-// @import "../vendor/bootstrap/scss/functions";
+/*!
+ * Bootstrap v4.3.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 The Bootstrap Authors
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
 
-// Import bootsrap4 required source files
-@import "import_bs4_required";
-
-// Import bootsrap4 optional source files
-@import "import_bs4_optional";
-
-// Add custom styles
-@import "custom_styles";
-
-
+@import "../vendor/bootstrap/scss/functions";
+@import "custom_variables";
+@import "../vendor/bootstrap/scss/variables";
+@import "../vendor/bootstrap/scss/mixins";
 
 // bootstrap source code
 // Required

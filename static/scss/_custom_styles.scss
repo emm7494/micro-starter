@@ -2,10 +2,11 @@
   // background-color: burlywood;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: minmax(auto, auto) auto;
+  grid-template-rows: minmax(auto, auto) auto 10vh;
   grid-template-areas:
-    "nav  nav  nav  nav  nav  nav  nav  nav  nav  nav  nav   nav"
-    "main main main main main main main main main main main  main";
+    "nav  nav  nav  nav  nav  nav  nav  nav  nav  nav  nav  nav"
+    "main main main main main main main main main main main main"
+    "foot foot foot foot foot foot foot foot foot foot foot foot";
 }
 
 .site-navbar {
@@ -15,16 +16,17 @@
 .page-main {
   grid-area: main;
 }
-// .page-header {
-//   grid-area: head;
-// }
+
+.site-footer {
+  grid-area: foot;
+}
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/img/2xLgVXC.png");
-  height: 50%;
+  background-image: url("/img/2xLgVXC.png");
+  height: 500%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  // object-fit: cover;
 }
