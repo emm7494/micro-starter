@@ -347,36 +347,36 @@ h6, .h6 {
   font-weight: 300; }
 
 .display-1 {
-  font-size: 11.08901rem;
+  font-size: 11.09rem;
   font-weight: 300;
   line-height: 1.2; }
   @media (max-width: 1200px) {
     .display-1 {
-      font-size: calc(2.2339rem + 11.80681vw) ; } }
+      font-size: calc(2.234rem + 11.808vw) ; } }
 
 .display-2 {
-  font-size: 6.85353rem;
+  font-size: 6.854rem;
   font-weight: 300;
   line-height: 1.2; }
   @media (max-width: 1200px) {
     .display-2 {
-      font-size: calc(1.81035rem + 6.72423vw) ; } }
+      font-size: calc(1.8104rem + 6.7248vw) ; } }
 
 .display-3 {
-  font-size: 4.2358rem;
+  font-size: 4.236rem;
   font-weight: 300;
   line-height: 1.2; }
   @media (max-width: 1200px) {
     .display-3 {
-      font-size: calc(1.54858rem + 3.58296vw) ; } }
+      font-size: calc(1.5486rem + 3.5832vw) ; } }
 
 .display-4 {
-  font-size: 2.61792rem;
+  font-size: 2.618rem;
   font-weight: 300;
   line-height: 1.2; }
   @media (max-width: 1200px) {
     .display-4 {
-      font-size: calc(1.38679rem + 1.64151vw) ; } }
+      font-size: calc(1.3868rem + 1.6416vw) ; } }
 
 hr {
   margin-top: 1rem;
@@ -798,7 +798,7 @@ select.form-control:focus::-ms-value {
 .col-form-label-sm {
   padding-top: calc(0.25rem + 1px);
   padding-bottom: calc(0.25rem + 1px);
-  font-size: 0.875rem;
+  font-size: 1.05rem;
   line-height: 1.5; }
 
 .form-control-plaintext {
@@ -819,7 +819,7 @@ select.form-control:focus::-ms-value {
 .form-control-sm {
   height: calc(1.5em + 0.5rem + 2px);
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 1.05rem;
   line-height: 1.5;
   border-radius: 0.2rem; }
 
@@ -897,7 +897,7 @@ textarea.form-control {
   max-width: 100%;
   padding: 0.25rem 0.5rem;
   margin-top: .1rem;
-  font-size: 0.875rem;
+  font-size: 1.05rem;
   line-height: 1.5;
   color: #fff;
   background-color: rgba(40, 167, 69, 0.9);
@@ -994,7 +994,7 @@ textarea.form-control {
   max-width: 100%;
   padding: 0.25rem 0.5rem;
   margin-top: .1rem;
-  font-size: 0.875rem;
+  font-size: 1.05rem;
   line-height: 1.5;
   color: #fff;
   background-color: rgba(220, 53, 69, 0.9);
@@ -1557,7 +1557,7 @@ fieldset:disabled a.btn {
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 1.05rem;
   line-height: 1.5;
   border-radius: 0.2rem; }
 
@@ -1787,7 +1787,7 @@ input[type="button"].btn-block {
   display: block;
   padding: 0.5rem 1.5rem;
   margin-bottom: 0;
-  font-size: 0.875rem;
+  font-size: 1.05rem;
   color: #6c757d;
   white-space: nowrap; }
 
@@ -2018,7 +2018,7 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-prepend > .btn,
 .input-group-sm > .input-group-append > .btn {
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 1.05rem;
   line-height: 1.5;
   border-radius: 0.2rem; }
 
@@ -2194,7 +2194,7 @@ input[type="button"].btn-block {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
-  font-size: 0.875rem; }
+  font-size: 1.05rem; }
 
 .custom-select-lg {
   height: calc(1.5em + 1rem + 2px);
@@ -2968,7 +2968,7 @@ input[type="button"].btn-block {
 
 .pagination-sm .page-link {
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 1.05rem;
   line-height: 1.5; }
 
 .pagination-sm .page-item:first-child .page-link {
@@ -3695,7 +3695,7 @@ a.close.disabled {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 0.875rem;
+  font-size: 1.05rem;
   word-wrap: break-word;
   opacity: 0; }
   .tooltip.show {
@@ -3780,7 +3780,7 @@ a.close.disabled {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 0.875rem;
+  font-size: 1.05rem;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: padding-box;
@@ -4963,6 +4963,54 @@ button.bg-dark:focus {
 .w-auto {
   width: auto !important; }
 
+.w-5 {
+  width: 5% !important; }
+
+.w-10 {
+  width: 10% !important; }
+
+.w-15 {
+  width: 15% !important; }
+
+.w-20 {
+  width: 20% !important; }
+
+.w-30 {
+  width: 30% !important; }
+
+.w-35 {
+  width: 35% !important; }
+
+.w-40 {
+  width: 40% !important; }
+
+.w-45 {
+  width: 45% !important; }
+
+.w-55 {
+  width: 55% !important; }
+
+.w-60 {
+  width: 60% !important; }
+
+.w-65 {
+  width: 65% !important; }
+
+.w-70 {
+  width: 70% !important; }
+
+.w-80 {
+  width: 80% !important; }
+
+.w-85 {
+  width: 85% !important; }
+
+.w-90 {
+  width: 90% !important; }
+
+.w-95 {
+  width: 95% !important; }
+
 .h-25 {
   height: 25% !important; }
 
@@ -4977,6 +5025,54 @@ button.bg-dark:focus {
 
 .h-auto {
   height: auto !important; }
+
+.h-5 {
+  height: 5% !important; }
+
+.h-10 {
+  height: 10% !important; }
+
+.h-15 {
+  height: 15% !important; }
+
+.h-20 {
+  height: 20% !important; }
+
+.h-30 {
+  height: 30% !important; }
+
+.h-35 {
+  height: 35% !important; }
+
+.h-40 {
+  height: 40% !important; }
+
+.h-45 {
+  height: 45% !important; }
+
+.h-55 {
+  height: 55% !important; }
+
+.h-60 {
+  height: 60% !important; }
+
+.h-65 {
+  height: 65% !important; }
+
+.h-70 {
+  height: 70% !important; }
+
+.h-80 {
+  height: 80% !important; }
+
+.h-85 {
+  height: 85% !important; }
+
+.h-90 {
+  height: 90% !important; }
+
+.h-95 {
+  height: 95% !important; }
 
 .mw-100 {
   max-width: 100% !important; }
@@ -6834,10 +6930,30 @@ a.text-dark:hover, a.text-dark:focus {
 .site-footer {
   grid-area: foot; }
 
-.hero-image {
-  background-image: url("/img/2xLgVXC.png");
-  height: 500%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.hero {
   position: relative; }
+  .hero::before {
+    content: "";
+    z-index: -1;
+    background-image: url("/img/aAkf3mD.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .hero::after {
+    content: "";
+    z-index: -1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(120deg, #eaee44, #33d0ff);
+    opacity: 0.3; }

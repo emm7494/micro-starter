@@ -130,9 +130,26 @@ $spacers: map-merge((0: 0,
 // This variable affects the `.h-*` and `.w-*` classes.
 $sizes: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
-$sizes: map-merge((25: 25%,
+$sizes: map-merge((
+        5: 5%,
+        10: 10%,
+        15: 15%,
+        20: 20%,
+        25: 25%,
+        30: 30%,
+        35: 35%,
+        40: 40%,
+        45: 45%,
         50: 50%,
+        55: 55%,
+        60: 60%,
+        65: 65%,
+        70: 70%,
         75: 75%,
+        80: 80%,
+        85: 85%,
+        90: 90%,
+        95: 95%,
         100: 100%,
         auto: auto),
     $sizes);
@@ -289,8 +306,14 @@ $font-family-base: $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
 $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
-$font-size-lg: $font-size-base * 1.50 !default;
-$font-size-sm: $font-size-base * .875 !default;
+// Implementing modular scale: golden ratio
+$font-scale: 1.618rem !default;
+
+$font-size-sm: $font-size-base * 1.05 !default;
+$font-size-lg: $font-size-base * 1.5 !default;
+
+// $font-size-sm: $font-size-base * .875 !default;
+// $font-size-lg: $font-size-base * 1.25 !default;
 
 $font-weight-lighter: lighter !default;
 $font-weight-light: 300 !default;
@@ -315,15 +338,29 @@ $headings-font-weight: 500 !default;
 $headings-line-height: 1.2 !default;
 $headings-color: null !default;
 
-// Implementing modular scale: golden ratio
-$font-scale: 1.618 !default;
 
-$display6-size: $font-size-base !default;
-$display5-size: $display6-size * $font-scale !default;
-$display4-size: $display5-size * $font-scale !default;
-$display3-size: $display4-size * $font-scale !default;
-$display2-size: $display3-size * $font-scale !default;
-$display1-size: $display2-size * $font-scale !default;
+// Implementing golden ratio scale
+$display4-size: $font-size-base + $font-scale !default;
+$display3-size: $font-scale + $display4-size !default;
+$display2-size: $display4-size + $display3-size !default;
+$display1-size: $display3-size + $display2-size !default;
+
+
+
+// $display6-size: $font-size-base + $font-scale !default;
+// $display5-size: $font-scale + $display6-size !default;
+// $display4-size: $display6-size + $display5-size !default;
+// $display3-size: $display5-size + $display4-size !default;
+// $display2-size: $display4-size + $display3-size !default;
+// $display1-size: $display3-size + $display2-size !default;
+
+
+// $display6-size: $font-size-base !default;
+// $display5-size: $display6-size * $font-scale !default;
+// $display4-size: $display5-size * $font-scale !default;
+// $display3-size: $display4-size * $font-scale !default;
+// $display2-size: $display3-size * $font-scale !default;
+// $display1-size: $display2-size * $font-scale !default;
 
 
 // $display1-size: 6rem !default;
