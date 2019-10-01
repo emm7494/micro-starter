@@ -28,6 +28,32 @@
 //   console.log(999);
 // });
 
+
+var prevScrollpos = window.pageYOffset;
+var navbar = document.getElementById('zz')
+window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    navbar.style.top = "0";
+  } else {
+    navbar.style.top = "-" + navbar.scrollHeight + "px";
+  }
+  prevScrollpos = currentScrollPos;
+};
+
+
+
+// var prevScrollpos = window.pageYOffset;
+// window.onscroll = function () {
+//   var currentScrollPos = window.pageYOffset;
+//   if (prevScrollpos > currentScrollPos) {
+//     document.getElementById('zz').style.top = "0";
+//   } else {
+//     document.getElementById('zz').style.top = "-200x";
+//   }
+//   prevScrollpos = currentScrollPos;
+// };
+
 let el = document.getElementById("time-area");
 (function timeLoop() {
   el.textContent =
