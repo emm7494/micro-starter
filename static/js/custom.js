@@ -28,20 +28,32 @@
 //   console.log(999);
 // });
 
+// var oldScrollPos = window.pageYOffset;
+// var navbar = document.getElementsByClassName("site-navbarz")[0];
+// window.onscroll = () => {
+//   var newScrollPos = window.pageYOffset;
+//   if (oldScrollPos > newScrollPos) {
+//     navbar.style.top = "0";
+//   } else {
+//     navbar.style.top = "-" + navbar.scrollHeight + "px";
+//   }
+//   oldScrollPos = newScrollPos;
+// };
 
-var oldScrollPos = window.pageYOffset;
-var navbar = document.getElementsByClassName('site-navbar')[0];
-window.onscroll = () =>  {
-  var newScrollPos = window.pageYOffset;
-  if (oldScrollPos > newScrollPos) {
-    navbar.style.top = "0";
-  } else {
-    navbar.style.top = "-" + navbar.scrollHeight + "px";
+var ele = document.querySelector("#on-test");
+var io = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      console.log(entry.target, observer);
+    });
+  },
+  {
+    // delay: 100,
+    // trackVisibility: true
   }
-  oldScrollPos = newScrollPos;
-};
+);
 
-
+io.observe(ele);
 
 // var prevScrollpos = window.pageYOffset;
 // window.onscroll = function () {
@@ -54,19 +66,19 @@ window.onscroll = () =>  {
 //   prevScrollpos = currentScrollPos;
 // };
 
-let el = document.getElementById("time-area");
-(function timeLoop() {
-  el.textContent =
-    moment()
-      .toISOString()
-      .split(".")[0] + "Z";
-  el.textContent +=
-    "\n" +
-    document.documentElement.clientWidth +
-    " x " +
-    document.documentElement.clientHeight;
-  requestAnimationFrame(timeLoop);
-})();
+// let el = document.getElementById("time-areaz");
+// (function timeLoop() {
+//   el.textContent =
+//     moment()
+//       .toISOString()
+//       .split(".")[0] + "Z";
+//   el.textContent +=
+//     "\n" +
+//     document.documentElement.clientWidth +
+//     " x " +
+//     document.documentElement.clientHeight;
+//   requestAnimationFrame(timeLoop);
+// })();
 
 // let th = document.getElementById("time-area");
 // th.appendChild(document.createTextNode(""));
