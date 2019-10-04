@@ -29,16 +29,16 @@
 // });
 
 
-var prevScrollpos = window.pageYOffset;
-var navbar = document.getElementById('zz')
-window.onscroll = function () {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
+var oldScrollPos = window.pageYOffset;
+var navbar = document.getElementsByClassName('site-navbar')[0];
+window.onscroll = () =>  {
+  var newScrollPos = window.pageYOffset;
+  if (oldScrollPos > newScrollPos) {
     navbar.style.top = "0";
   } else {
     navbar.style.top = "-" + navbar.scrollHeight + "px";
   }
-  prevScrollpos = currentScrollPos;
+  oldScrollPos = newScrollPos;
 };
 
 
