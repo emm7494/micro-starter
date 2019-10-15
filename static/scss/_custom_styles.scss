@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Comfortaa";
+  src: url("/font/Comfortaa/Comfortaa-VariableFont:wght.ttf");
+}
+
 .site-wrapper {
   // background-color: burlywood;
   display: grid;
@@ -23,7 +28,7 @@
 
 .hero {
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
 
   // object-fit: cover;
   &::before {
@@ -132,10 +137,13 @@ html {
 }
 
 .site-navbar {
-  transition: top 0.5s;
-
+  transition: background-color 0.2s ease-out;
+  &--shadow {
+    border-radius: 0px 0px 2px 2px;
+    box-shadow: 0 1px 10px #999;
+  }
   &::after {
-    content: "";
+    // content: "";
     z-index: -1;
     // background-image: url("/img/aAkf3mD.jpg");
     background-position: center;
@@ -147,7 +155,7 @@ html {
     left: 0%;
     width: 100%;
     height: 100%;
-    filter: blur(20px);
+    // filter: blur(20px);
     // object-fit: cover;
     // background-image: linear-gradient(-120deg, #33d0ff, #eaee44);
     background: linear-gradient(to right, #373c32 50%, #373c32 50%);
@@ -167,4 +175,26 @@ html {
   // &-container {
   //   //
   // }
+}
+
+#parent {
+  background-color: lightblue;
+  padding: 60.2344px 0 0;
+  margin: 100px 0 0;
+}
+
+#child {
+  background-color: lightpink;
+  margin: 0;
+  padding: 0;
+}
+
+.hero_sentinel {
+  position: absolute;
+  background-color: orange;
+  // height: 0;
+  top: 0;
+  // left: 0;
+  // right: 0;
+  visibility: hidden;
 }
