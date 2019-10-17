@@ -7,11 +7,13 @@
 
 <body>
   <div class="site-wrapper">
-    <header class="site-navbar navbar navbar-expand-md fixed-top navbar-dark zbg-dark px-md-6">
+    <header class="site-navbar navbar navbar-expand-md fixed-top navbar-light zbg-dark px-md-6">
       <a href="{{ url_for('index') }}" class="navbar-brand"><span class=" font-weight-bold">Micro Starter</span></a>
+      
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-site-nav">
         <span class="navbar-toggler-icon"></span>
       </button>
+      
       <div class="collapse navbar-collapse justify-content-end py-2" id="main-site-nav">
         <ul class="navbar-nav text-center text-uppercase">
           {% from '_macros.html' import set_active_page %}
