@@ -1,3 +1,10 @@
+var $ = (window.jQuery = window.$ = require("jquery"));
+require("popper.js");
+require("bootstrap");
+$(document).ready(function() {
+  $('[data-toggle="tooltip"]').tooltip();
+});
+
 function toggleClassList(target, classList, condition) {
   classList.forEach((cls) => {
     target.classList.toggle(cls, condition);
